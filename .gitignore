@@ -1,6 +1,0 @@
-.env
-node_modules
-yarn-error.log
-tsconfig.tsbuildinfo
-yarn.lock
-src/locales

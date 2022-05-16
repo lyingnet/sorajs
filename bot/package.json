@@ -1,0 +1,73 @@
+{
+  "name": "sorabot",
+  "version": "1.0.0",
+  "description": "This is a project where i strictly use djs related things to build a bot!",
+  "main": "./dist/index.js",
+  "exports": {
+    "./*": "./dist/*s"
+  },
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@sapphire/eslint-config": "^4.3.4",
+    "@sapphire/prettier-config": "^1.4.3",
+    "@sapphire/result": "^1.1.1",
+    "@sapphire/ts-config": "^3.3.4",
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.179",
+    "@swc/jest": "^0.2.21",
+    "@types/express": "^4.17.13",
+    "@types/express-session": "^1.17.4",
+    "@types/node": "^17.0.30",
+    "@types/passport": "^1.0.7",
+    "@types/passport-discord": "^0.1.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.13.0",
+    "@sapphire/fetch": "^2.3.1",
+    "@sapphire/pieces": "^3.3.1",
+    "@skyra/env-utilities": "^0.0.7",
+    "@types/i18n": "^0.13.2",
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "discord-api-types": "^0.32.1",
+    "discord.js": "^13.6.0",
+    "express": "^5.0.0-beta.1",
+    "express-session": "^1.17.3",
+    "helmet": "^5.0.2",
+    "i18n": "^0.14.2",
+    "passport": "^0.5.2",
+    "passport-discord": "^0.1.4",
+    "passport-oauth2": "^1.6.1",
+    "prisma": "^3.13.0",
+    "typescript": "^4.7.0-dev.20220501"
+  },
+  "scripts": {
+    "build:prod": "swc --config-file .swcrc.json -d dist/ src",
+    "test": "jest --pass-with-no-tests"
+  },
+  "eslintConfig": {
+    "extends": [
+      "sapphire/eslint-config",
+      "sapphire/ts-config"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "typesVersions": {
+      "*": {
+        "*": [
+          "dist/*"
+        ]
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/lyingnet/sorajs/issues"
+  },
+  "repository": {
+    "url": "https://github.com/lyingnet/sorajs.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/lyingnet/sorajs#readme"
+}
