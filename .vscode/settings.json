@@ -1,6 +1,0 @@
-{
-    "deepscan.enable": true,
-    "[svelte]": {
-        "editor.defaultFormatter": "svelte.svelte-vscode"
-      },
-}
