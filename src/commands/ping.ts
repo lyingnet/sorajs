@@ -8,7 +8,6 @@ export class PingCommand extends Command {
       name: "ping", // Command name
       aliases: ["p"], // Optional aliases
       description: "Replies with Pong!",
-      preconditions: ["Tier"],
     });
   }
 

@@ -14,7 +14,12 @@ datasource db {
 }
 
 model PremiumUser {
-  userId String @id @map("_id") // Maps userId to MongoDB's _id field
-  prefix String?
-  tier   Int    @default(0)
+  userId String @id @map("_id") // Discord user ID mapped to MongoDB's _id
+  tier   Int    @default(0)     // 0 = Free, 1+ = Premium tiers
+  prefix String?                // Optional custom prefix for premium users
+}
+
+model GuildConfig {
+  guildId String @id @map("_id") // Discord guild ID mapped to MongoDB's _id
+  prefix  String?                // Optional guild-specific prefix
 }

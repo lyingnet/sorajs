@@ -10,6 +10,7 @@ const client = new BotClient();
   try {
     console.log("Starting Bot...");
     container.db = client.db; // Attach Prisma to Sapphire's container
+
     await client.login(process.env.TOKEN); // Ensure DISCORD_TOKEN is set in your .env file
     console.log("Bot logged in successfully!");
   } catch (error) {
